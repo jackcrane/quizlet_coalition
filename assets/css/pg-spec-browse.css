@@ -1,0 +1,10 @@
+@import url('input.css');
+@import url('switch.css');
+
+.index-search input[type=text] {
+  width:calc(100% - 30px);
+}
+
+.card-label h2 {
+  margin-block-end:0;
+}

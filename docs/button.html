@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button</title>
+	<link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body style="padding-left:5%">
+<a href="" class="btn light">btn light</a><br>
+<a href="" class="btn dark">btn dark</a><br>
+<a href="" class="btn red">btn red</a><br>
+<a href="" class="btn green">btn green</a><br>
+<a href="" class="btn blue">btn blue</a><br>
+<a href="" class="btn red outline">btn red outline</a><br><br>
+<div style="padding:10px;background-color:lightgrey;width:90%">
+	Live Demo<br>
+	<select onchange="updateCol(this.value)">
+		<option value="color">Color</option>
+		<option value="dark">dark</option>
+		<option value="light">light</option>
+		<option value="red">red</option>
+		<option value="green">green</option>
+		<option value="blue">blue</option>
+	</select>
+	<input type="checkbox" id="check" onchange="updateDis()"><label for="check">Disabled</label>
+	<input type="checkbox" id="outline" onchange="updateOut()"><label for="outline">Outline</label>
+	<br>
+	<span id="btnspan"><a href="" class="btn dark" id="btn">Demo Button</a></span><br>
+	Code:
+	<pre><code id="code"></code></pre>
+</div>
+<script>
+	function updateCol(val) {
+		document.getElementById("btn").classList.remove("red","green","blue","light","dark")
+		document.getElementById("btn").classList.add(val)
+		updateCode()
+	}
+	function updateDis() {
+		document.getElementById("btn").classList.toggle("disabled")
+		updateCode()
+	}
+	function updateOut() {
+		document.getElementById("btn").classList.toggle("outline")
+		updateCode()
+	}
+	function updateCode() {
+		document.getElementById("code").innerHTML=document.getElementById("btnspan").innerHTML.replace("<","&lt;").replace(">","&gt;").replace("<","&lt;").replace(">","&gt;")
+	}
+	updateCode()
+</script>
+</body>
+</html>
