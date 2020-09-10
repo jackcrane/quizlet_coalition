@@ -13,11 +13,9 @@
 <body>
 	<div class="maincontent padded">
 		<div class="navbar top clearfix">
-			<h2 class="bold left">Quizlet Coalition</h2>
+			<a href="index.html" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
 			<div class="right">
-				<a href="" class="link">About</a>
-				<a href="" class="link">Join as volunteer</a>
-				<a href="" class="link github"><i class="fa fa-github"></i></a>
+				<a href="about" class="link">About</a>
 			</div>
 		</div>
 		<div class="index-split">

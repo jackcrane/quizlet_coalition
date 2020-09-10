@@ -3,12 +3,7 @@
 <head>
 	<title>Quizletcoalition.cc</title>
 	<link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/pg-spec-request.css" rel="stylesheet">
-  <link href="assets/css/input.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/3ba0d60fb5.js" crossorigin="anonymous"></script>
-  <script src="assets/js/request.js"></script>
-  <script src="assets/js/browse.js"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
@@ -19,14 +14,15 @@
 				<a href="about" class="link">About</a>
 			</div>
 		</div>
-		<div class="index-split">
-      <input type="text" class="input dark outline fullwidth" placeholder="Search for quizlets... Search specifically for teachers by putting them in {} or a school with []" onkeyup="search(this.value)">
-      <br><br>
-      <div id="results">
-        <span class="helpertext">No results</span>
-      </div>
+    <div class="index">
+      <h1>Developers</h1>
+      <p>Heres how you can use our qz-data api:</p>
+      <p>Make a request: <pre><code>quizletcoalition.cc/api/get?url=<span style="color:orange;font-weight:bold;">link_to_qz</span></code></pre>
+      <p><code><span style="color:orange;">link_to_qz</span></code>: This is the link to the base of the quizlet. It should look something like: <code>https://quizlet.com/12345678/title-of-the-quizlet</code>.</p>
+      <p>The API will return text that can be encoded to JSON. From there, its up to you</p>
     </div>
-	</div>
+
+
 		<div class="footer">
 		</div>
 	</div>
