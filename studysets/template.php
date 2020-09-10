@@ -58,7 +58,7 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
 <body>
 	<div class="maincontent padded">
 		<div class="navbar top clearfix">
-      <a href="../../index.html" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
+      <a href="../../index" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
 			<div class="right">
 				<a href="about" class="link">About</a>
 			</div>
