@@ -23,3 +23,7 @@
 	background-color:var(--olhovc);
 	color:var(--bgc)
 }
+
+.input.fullwidth {
+	width: calc(100% - 30px);
+}

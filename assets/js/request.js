@@ -1,5 +1,6 @@
 let apiResponse;
 let quizlet_link;
+let quizlet_title;
 let schoolId;
 let teacherId;
 let classId;
@@ -55,6 +56,7 @@ let cards = {
     document.getElementById("preview_table").appendChild(h1)
     document.getElementById("nextbtn").style.display = "initial"
     document.getElementById("nextbtn").innerHTML = "Is this the title of your Quizlet?"
+    quizlet_title = apiResponse.title;
   }
 }
 
@@ -442,7 +444,7 @@ function submit() {
   console.log(schoolId)
   console.log(teacherId)
   console.log(classId)
-  let link = "api/add?link="+quizlet_link+"&schoolId="+schoolId+"&teacherId="+teacherId+"&classId="+classId
+  let link = "api/add?link="+quizlet_link+"&schoolId="+schoolId+"&teacherId="+teacherId+"&classId="+classId+"&title="+quizlet_title;
   console.log(link)
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {

@@ -6,6 +6,8 @@ $context = stream_context_create(array(
     )
 ));
 
+$title_only;
+
 if(isset($internal)) {
   $url = $internal_url;
   $title_only = $internal_title_only;

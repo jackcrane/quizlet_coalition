@@ -9,6 +9,7 @@ $link = "'".filter_var($_GET["link"], FILTER_SANITIZE_STRING)."'";
 $schoolId = "'".filter_var($_GET["schoolId"], FILTER_SANITIZE_STRING)."'";
 $teacherId = "'".filter_var($_GET["teacherId"], FILTER_SANITIZE_STRING)."'";
 $classId = "'".filter_var($_GET["classId"], FILTER_SANITIZE_STRING)."'";
+$title = "'".filter_var($_GET["title"], FILTER_SANITIZE_STRING)."'";
 // echo $link;
 // echo $teacherId;
 
@@ -22,7 +23,7 @@ if($result->num_rows > 0) {
   }
 } else {
 
-  $sql = "INSERT INTO `studysets`(`link`, `schoolId`, `teacherId`, `classId`,`submitterIp`) VALUES ($link,$schoolId,$teacherId,$classId,$ip)";
+  $sql = "INSERT INTO `studysets`(`link`, `title`, `schoolId`, `teacherId`, `classId`,`submitterIp`) VALUES ($link,$title,$schoolId,$teacherId,$classId,$ip)";
   // echo $sql;
 
   if ($conn->query($sql) === TRUE) {

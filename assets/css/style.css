@@ -487,6 +487,18 @@ a.detailparent {
 .col {
 	color:var(--bgc);
 }
+
+.queryResult {
+	border: 4px solid var(--black-rep);
+	padding: 11px;
+	margin-bottom:15px;
+	border-radius:5px;
+}
+
+.queryResult h1,.queryResult h5 {
+	margin:0;
+}
+
 @media only screen and (max-width:1500px) {
 	.card {
 		width:44%;

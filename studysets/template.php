@@ -20,8 +20,8 @@ if($result->num_rows > 0) {
     if (!file_exists($thispage)) {
       mkdir($thispage);
     }
-    $filetodownload = fopen($returned_title.".json","w");
-    fwrite($filetodownload,$returned_cards);
+    @$filetodownload = fopen($returned_title.".json","w");
+    @fwrite($filetodownload,$returned_cards);
     $classname = $row["classId"];
     $schoolsql = "SELECT * FROM `schools` WHERE id = ".$row["schoolId"];
     $schoolresult = $conn->query($schoolsql);
@@ -58,10 +58,9 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
 <body>
 	<div class="maincontent padded">
 		<div class="navbar top clearfix">
-			<h2 class="bold left">Quizlet Coalition</h2>
+      <a href="../../index.html" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
 			<div class="right">
 				<a href="" class="link">About</a>
-				<a href="" class="link">Join as volunteer</a>
 				<a href="" class="link github"><i class="fa fa-github"></i></a>
 			</div>
 		</div>
@@ -69,9 +68,8 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
     <h5 class="thin" style="margin-top:0;"><a href="" class="helper-text"><?php echo $schoolname; ?></a> &gt <a href="" class="helper-text"><?php echo $classname; ?></a> ( <a href="" class="helper-text"><?php echo $teachername; ?></a> )</h5>
     <a class="btn qz-blue tz-on-mobile" href="<?php echo $qz_link; ?>" target="_BLANK">View on Quizlet</a>
     <a class="btn qz-red tz-on-mobile" href="<?php echo $qz_base_link . "print"; ?>" target="_BLANK">Print a study guide</a>
-    <a class="btn qz-yellow tz-on-mobile" href="<?php echo $returned_title . ".json"; ?>" download>Download the terms</a>
+    <?php if(file_exists($returned_title.".json")) {echo '<a class="btn qz-yellow tz-on-mobile" href="'. $returned_title . ".json" . '" download>Download the terms</a>';}?>
 		<div class="footer">
-			<p>VolunteerMatch.cc is a project organized by volunteers worldwide. <a href="" class="btn inline lightgrey">Join the effort</a> to contribute.</p>
 		</div>
 	</div>
 </body>
