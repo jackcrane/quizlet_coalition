@@ -38,7 +38,7 @@
 					<h1>I need a</h1>
 					<h1 class="thin">Quizlet</h1>
 					<div class="options options-request">
-						<a href="browse.php" class="btn light outline">Browse by teacher</a><br>
+						<a href="browse.php" class="btn light outline">Browse</a><br>
 					</div>
 				</div>
 			</div>
