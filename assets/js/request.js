@@ -176,7 +176,7 @@ let classes = {
     document.getElementById("nextbtn").style.display = 'none'
     if(n!="") {
       document.getElementById("addCourseBtn").classList.add('disabled');
-      let courseName = n.value;
+      let courseName = n;
       courseId = courseName;
       //api/teachers/addclass?tid=21&cnm=
       let link = "api/teachers/addclass.php?tid=" + teacherId + "&cnm=" + courseName;
@@ -188,11 +188,11 @@ let classes = {
           debugConsoleLog(courseAddApiResponse)
           if(courseAddApiResponse[0] == 100) {
             status = "Course added successfully";
-            courseId = parseInt(courseAddApiResponse[1])
+            // courseId = parseInt(courseAddApiResponse[1])
             document.getElementById("addCourseStatusReturn").innerHTML = status
           } else if(courseAddApiResponse[0] == 102) {
             status = "Course already exists";
-            courseId = parseInt(courseAddApiResponse[1])
+            // courseId = parseInt(courseAddApiResponse[1])
             document.getElementById("addCourseStatusReturn").innerHTML = status
           } else if(courseAddApiResponse[0] == 104) {
             status = "Something went wrong. Please try again later. If the issue persists, please contact us.";
