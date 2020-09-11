@@ -13,7 +13,30 @@
 
   gtag('config', 'UA-177772435-1');
 </script>
+<!-- Primary Meta Tags -->
+<title>Home - Quizlet Coalition - Find and share quizlets!</title>
+<meta name="title" content="Quizlet Coalition - Find and share quizlets!">
+<meta name="description" content="Quizlet Coalition is a web app designed to help find and share quizlets from and with your classmates or previous students.">
 
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metatags.io/">
+<meta property="og:title" content="Quizlet Coalition - Find and share quizlets!">
+<meta property="og:description" content="Quizlet Coalition is a web app designed to help find and share quizlets from and with your classmates or previous students.">
+<meta property="og:image" content="https://quizletcoalition.cc/assets/images/og.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="Quizlet Coalition - Find and share quizlets!">
+<meta property="twitter:description" content="Quizlet Coalition is a web app designed to help find and share quizlets from and with your classmates or previous students.">
+<meta property="twitter:image" content="https://quizletcoalition.cc/assets/images/og.png">
+
+<meta name="keywords" content="study tool,study,quizlet,learn,share">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
 </head>
 <body>
 	<div class="maincontent padded">

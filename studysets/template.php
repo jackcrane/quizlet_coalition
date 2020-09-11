@@ -63,7 +63,7 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
 
   gtag('config', 'UA-177772435-1');
 </script>
-
+<meta name="robots" content="noindex">
 </head>
 <body>
 	<div class="maincontent padded">
