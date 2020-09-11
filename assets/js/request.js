@@ -53,6 +53,7 @@ let cards = {
   displayTitle:function() {
     let h1 = document.createElement("h1")
     h1.innerHTML = apiResponse.title
+    document.getElementById("preview_table").innerHTML = ""
     document.getElementById("preview_table").appendChild(h1)
     document.getElementById("nextbtn").style.display = "initial"
     document.getElementById("nextbtn").innerHTML = "Is this the title of your Quizlet?"
@@ -174,8 +175,8 @@ let classes = {
     document.getElementById("nextbtn").style.display = 'none'
     if(n!="") {
       document.getElementById("addCourseBtn").classList.add('disabled');
-      let courseName = n;
-      courseId = courseName.value;
+      let courseName = n.value;
+      courseId = courseName;
       //api/teachers/addclass?tid=21&cnm=
       let link = "api/teachers/addclass.php?tid=" + teacherId + "&cnm=" + courseName;
       var xmlhttp = new XMLHttpRequest();
