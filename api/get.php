@@ -8,7 +8,7 @@ $context = stream_context_create(array(
 
 if(isset($internal)) {
   $url = $internal_url;
-  $title_only = $internal_title_only;
+  $title_only = @$internal_title_only;
 } else {
   $url = $_GET["url"];
   $title_only = @$_GET["title_only"];
