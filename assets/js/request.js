@@ -172,6 +172,7 @@ let classes = {
   },
   addCourseStatus:"",
   addCourseM:function(n) {
+    console.log(n)
     document.getElementById("nextbtn").style.display = 'none'
     if(n!="") {
       document.getElementById("addCourseBtn").classList.add('disabled');
