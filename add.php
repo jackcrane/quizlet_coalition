@@ -13,9 +13,9 @@
 <body>
 	<div class="maincontent padded">
 		<div class="navbar top clearfix">
-			<a href="index" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
+			<a href="index.php" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
 			<div class="right">
-				<a href="about" class="link">About</a>
+				<a href="about.php" class="link">About</a>
 			</div>
 		</div>
 		<div class="index-split">
@@ -120,7 +120,6 @@
     </div>
 	</div>
 		<div class="footer">
-			<p>VolunteerMatch.cc is a project organized by volunteers worldwide. <a href="" class="btn inline lightgrey">Join the effort</a> to contribute.</p>
 		</div>
 	</div>
 </body>

@@ -34,7 +34,7 @@ let cards = {
         }
       }
     };
-    xmlhttp.open("GET", "./api/get?url="+value, true);
+    xmlhttp.open("GET", "./api/get.php?url="+value, true);
     xmlhttp.send();
   },
   displayCards:function() {
@@ -81,8 +81,8 @@ let classes = {
         }
       }
     };
-    debugConsoleLog("./api/teachers/get?school_id="+schoolId+"&name="+value)
-    xmlhttp.open("GET", "./api/teachers/get?school_id="+schoolId+"&name="+value, true);
+    debugConsoleLog("./api/teachers/get.php?school_id="+schoolId+"&name="+value)
+    xmlhttp.open("GET", "./api/teachers/get.php?school_id="+schoolId+"&name="+value, true);
     xmlhttp.send();
   },
   displayClasses:function() {
@@ -176,7 +176,7 @@ let classes = {
       document.getElementById("addCourseBtn").classList.add('disabled');
       let courseName = n;
       //api/teachers/addclass?tid=21&cnm=
-      let link = "api/teachers/addclass?tid=" + teacherId + "&cnm=" + courseName;
+      let link = "api/teachers/addclass.php?tid=" + teacherId + "&cnm=" + courseName;
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -226,8 +226,8 @@ let schools = {
         schools.displaySchools();
       }
     };
-    debugConsoleLog("./api/schools/get?name="+value+"&loc="+loc)
-    xmlhttp.open("GET", "./api/schools/get?name="+value+"&loc="+loc, true);
+    debugConsoleLog("./api/schools/get.php?name="+value+"&loc="+loc)
+    xmlhttp.open("GET", "./api/schools/get.php?name="+value+"&loc="+loc, true);
     xmlhttp.send();
   },
   displaySchools:function() {
@@ -280,7 +280,7 @@ let schools = {
       document.getElementById("addSchoolBtn").classList.add('disabled')
       let schoolName = n;
       let schoolLocation = l + ", " + c;
-      let link = "api/schools/add?loc=" + schoolLocation + "&name=" + schoolName;
+      let link = "api/schools/add.php?loc=" + schoolLocation + "&name=" + schoolName;
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -360,7 +360,7 @@ let schools = {
       if(n!="") {
         document.getElementById("addSchoolBtn").classList.add('disabled');
         let teacherName = n;
-        let link = "api/teachers/add?loc=" + schoolId + "&name=" + n;
+        let link = "api/teachers/add.php?loc=" + schoolId + "&name=" + n;
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
@@ -444,7 +444,7 @@ function submit() {
   console.log(schoolId)
   console.log(teacherId)
   console.log(classId)
-  let link = "api/add?link="+quizlet_link+"&schoolId="+schoolId+"&teacherId="+teacherId+"&classId="+classId+"&title="+quizlet_title;
+  let link = "api/add.php?link="+quizlet_link+"&schoolId="+schoolId+"&teacherId="+teacherId+"&classId="+classId+"&title="+quizlet_title;
   console.log(link)
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
