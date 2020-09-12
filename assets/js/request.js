@@ -178,6 +178,7 @@ let classes = {
       document.getElementById("addCourseBtn").classList.add('disabled');
       let courseName = n;
       courseId = courseName;
+      classId = courseName;
       //api/teachers/addclass?tid=21&cnm=
       let link = "api/teachers/addclass.php?tid=" + teacherId + "&cnm=" + courseName;
       var xmlhttp = new XMLHttpRequest();
