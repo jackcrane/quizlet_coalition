@@ -59,7 +59,7 @@
 							<!-- ********************  ADD QUIZLET LINK  ************************* -->
 							<td id="1">
                 <label for="">Link to your quizlet:</label><br>
-                <input type="text" value="https://quizlet.com/141802621/world-religion-background-information-flash-cards/" class="input light outline dark-highlights halfwidth" placeholder="https://quizlet.com/123/name" id="url_input">  <a class="btn input-inline blue" id="searchbtn" href="javascript:cards.getCards(document.getElementById('url_input').value)">Search</a><br>
+                <input type="text" class="input light outline dark-highlights halfwidth" placeholder="https://quizlet.com/123/name" id="url_input">  <a class="btn input-inline blue" id="searchbtn" href="javascript:cards.getCards(document.getElementById('url_input').value)">Search</a><br>
 								<br>
 								<div class="tcontainer" id="preview_table">
 								</div>

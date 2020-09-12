@@ -1,8 +1,8 @@
 <?php
 
-$linksearch = filter_var($_GET["link"],FILTER_SANITIZE_STRING);
-$titlesearch = filter_var($_GET["title"],FILTER_SANITIZE_STRING);
-$classidsearch = filter_var($_GET["cids"],FILTER_SANITIZE_STRING);
+// $linksearch = filter_var($_GET["link"],FILTER_SANITIZE_STRING);
+// $titlesearch = filter_var($_GET["title"],FILTER_SANITIZE_STRING);
+// $classidsearch = filter_var($_GET["cids"],FILTER_SANITIZE_STRING);
 $query = filter_var($_GET["query"],FILTER_SANITIZE_STRING);
 
 include "../assets/db_config.php";
