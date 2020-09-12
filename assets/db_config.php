@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$username = "{USERNAME GOES HERE}";
-$password = "{PASS GOES HERE}";
+$username = "root";
+$password = "Guro6297";
 $db_name = "quizlet_coalition";
 $err = "";
 

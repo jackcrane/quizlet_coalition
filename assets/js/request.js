@@ -302,7 +302,7 @@ let schools = {
             document.getElementById("addSchoolStatusReturn").innerHTML = schools.addSchoolStatus
           }
           document.getElementById("nextbtn").innerHTML = "Next"
-          document.getElementById("nextbtn").href = "javascript:navigation.nextS()"
+          document.getElementById("nextbtn").href = "javascript:navigation.nextSc()"
           document.getElementById("nextbtn").style.display = 'initial'
         }
       };
@@ -410,7 +410,15 @@ let navigation = {
     navigation.currentSlide--
     // document.getElementById("nextbtn").style.display="none"
   },
+  nextSc:function() {
+    document.getElementById("addSchool").style.display = "none";
+    document.getElementById("addTeacher").style.display = "table-cell";
+    navigation.currentSlide++;
+    document.getElementById("nextbtn").style.display = "none";
+    // classes.addCourse();
+  },
   nextS:function() {
+    // document.getElementById("addSchool").style.display = "none";
     document.getElementById("addTeacher").style.display = "none";
     document.getElementById("4").style.display = "table-cell";
     navigation.currentSlide++;

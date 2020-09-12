@@ -145,7 +145,6 @@
 								<div class="right">
 									<a href="javascript:navigation.next()" class="btn blue" id="nextbtn" style="display:none">Next</a>
 								</div><br><br><br><br><br>
-								<center><label>Your inputs are saved by session. This means if you close or reload the page, your changes <b>will not be saved</b></label></center>
 							</td>
 						</tr>
 					</table>
@@ -153,6 +152,7 @@
     </div>
 	</div>
 		<div class="footer">
+			<!-- <center><label>Your inputs are saved by session. This means if you close or reload the page, your changes <b>will not be saved</b></label></center> -->
 		</div>
 	</div>
 </body>

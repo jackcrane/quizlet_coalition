@@ -528,6 +528,16 @@ a.detailparent {
 		position:static;
 		margin-bottom:5%;
 	}
+	.tcontainer {
+		max-width:80%;
+	}
+	#url_input, #state_input, #teacher_input, #teacherName, #schoolLocation, #schoolName, #courseName {
+		display: block;
+		width: calc(100% - 30px);
+	}
+	#country_input, .table_display, #schoolLocationCountry {
+		width:100%!important;
+	}
 }
 
 @media only screen and (max-width:850px) {
