@@ -269,6 +269,7 @@ let schools = {
       // debugConsoleLog(schoolApiResponse.schools[property])
       document.getElementById("table_display").style.display = "block"
     }
+    document.getElementById("table_display").style.display = "block"
 
   },
   addSchool:function() {
