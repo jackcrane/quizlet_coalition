@@ -64,6 +64,7 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
   gtag('config', 'UA-177772435-1');
 </script>
 <meta name="robots" content="noindex">
+<script data-ad-client="ca-pub-5399968831948065" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
 	<div class="maincontent padded">
