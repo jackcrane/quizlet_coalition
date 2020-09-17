@@ -38,7 +38,7 @@ if($result->num_rows > 0) {
       }
     }
     $addhitsql = "UPDATE `studysets` SET `hits` = '".$row["hits"]."' WHERE `studysets`.`id` = ".$row["id"];
-    echo $addhitsql;
+    $addhitresult = $conn->query($addhitsql);
   }
 }
 
