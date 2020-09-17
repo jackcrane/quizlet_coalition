@@ -37,7 +37,9 @@ if($result->num_rows > 0) {
         $teachername = $teacherrow["name"];
       }
     }
-    $addhitsql = "UPDATE `studysets` SET `hits` = '".$row["hits"]."' WHERE `studysets`.`id` = ".$row["id"];
+    $nextnum = (int) preg_replace('/[^0-9]/', '', $row["hits"]);
+    $nextnum++;
+    $addhitsql = "UPDATE `studysets` SET `hits` = '".$nextnum."' WHERE `studysets`.`id` = ".$row["id"];
     $addhitresult = $conn->query($addhitsql);
   }
 }
