@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div class="index-split">
-      <input type="text" value="<?php echo $query; ?>" class="input dark outline fullwidth" placeholder="Search for quizlets... Search specifically for teachers by putting them in {} or a school with []" onkeyup="search(this.value)" <?php if($query!=="") {echo 'onload="search(this.value)"';} ?>>
+      <input type="text" value="<?php echo $query; ?>" class="input dark outline fullwidth" placeholder="Search for quizlets... Search specifically for teachers by putting them in {} or a school with []" onkeyup="search(this.value)" <?php if($query!=="") {echo 'onload="alert(\'Ive been loaded\')"';} ?>>
       <br><br>
       <div id="results">
         <span class="helpertext">No results</span>
