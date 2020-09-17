@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div class="index-split">
-			<?php @echo $query; ?>
+			<?php echo $query; ?>
 			<?php //if($query!=="") {@echo 'onload="'.$query.'"';} ?>
       <input type="text" value="" class="input dark outline fullwidth" placeholder="Search for quizlets... Search specifically for teachers by putting them in {} or a school with []" onkeyup="search(this.value)" >
       <br><br>
