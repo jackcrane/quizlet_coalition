@@ -29,7 +29,7 @@
 		<h1 class="thin" style="margin-bottom:0;">Error <span class="thin">404</span></h1>
     <h5 class="thin" style="margin-top:0;">File Not Found</h5>
 		<h2>We couldn't mask this error.<br><br>You should mask yourself though</h2>
-		<a class="btn blue" href="https://www.amazon.com/s?k=masks">Buy a mask</a><br>
+		<a class="btn blue" target="_BLANK" href="https://www.amazon.com/s?k=masks">Buy a mask</a><br>
 		<a class="btn green outline" href="/add.php">Add a quizlet</a><br>
 		<a class="btn green outline" href="/browse.php">Search for a quizlet</a><br><br>
     <div class="footer">
