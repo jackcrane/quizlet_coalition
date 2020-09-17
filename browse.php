@@ -50,7 +50,7 @@
 <meta name="language" content="English">
 <meta name="revisit-after" content="1 days">
 </head>
-<body <?php if($query!=="") {echo 'onload="alert(\'Ive been loaded\')"';} ?>>
+<body <?php if($query!=="") {echo 'onload="search(document.getElementById(\'search\').value)"';} ?>>
 	<div class="maincontent padded">
 		<div class="navbar top clearfix">
 			<a href="index.php" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 		<div class="index-split">
-      <input type="text" value="<?php echo $query; ?>" class="input dark outline fullwidth" placeholder="Search for quizlets... Search specifically for teachers by putting them in {} or a school with []" onkeyup="search(this.value)">
+      <input type="text" id="search" value="<?php echo $query; ?>" class="input dark outline fullwidth" placeholder="Search for quizlets... Search specifically for teachers by putting them in {} or a school with []" onkeyup="search(this.value)">
       <br><br>
       <div id="results">
         <span class="helpertext">No results</span>
