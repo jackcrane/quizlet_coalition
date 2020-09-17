@@ -84,7 +84,7 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
 	</div>
 </body>
 <div id="notify">
-    <div class="ads" style="width:1px">
+    <div class="ads">
     </div>
 </div>
 </html>
