@@ -75,7 +75,7 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
 			</div>
 		</div>
 		<h1 class="thin" style="margin-bottom:0;"><?php echo $returned_title; ?></h1>
-    <h5 class="thin" style="margin-top:0;"><a href="" class="helper-text"><?php echo $schoolname; ?></a> &gt <a href="" class="helper-text"><?php echo $classname; ?></a> ( <a href="" class="helper-text"><?php echo $teachername; ?></a> )</h5>
+    <h5 class="thin" style="margin-top:0;"><a href="/search.php?squery=[<?php echo $schoolname ?>]" class="helper-text"><?php echo $schoolname; ?></a> &gt <a href="/search.php?squery=[<?php echo $schoolname; ?>&tquery={<?php echo $teachername; ?>}" class="helper-text"><?php echo $teachername; ?></a></h5>
     <a class="btn qz-blue tz-on-mobile" href="<?php echo $qz_link; ?>" target="_BLANK">View on Quizlet</a>
     <a class="btn qz-red tz-on-mobile" href="<?php echo $qz_base_link . "print"; ?>" target="_BLANK">Print a study guide</a>
     <?php if(file_exists($returned_title.".json")) {echo '<a class="btn qz-yellow tz-on-mobile" href="'. $returned_title . ".json" . '" download>Download the terms</a>';}?>
