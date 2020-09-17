@@ -50,7 +50,7 @@
 <meta name="language" content="English">
 <meta name="revisit-after" content="1 days">
 </head>
-<body>
+<body onload="alert('ive been loaded')">
 	<div class="maincontent padded">
 		<div class="navbar top clearfix">
 			<a href="index.php" style="color:var(--black-rep);"><h2 class="bold left">Quizlet Coalition</h2></a>
