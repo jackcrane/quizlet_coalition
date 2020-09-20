@@ -20,7 +20,7 @@ function search(v) {
             subtitle.innerHTML = searchResponse.results[property].link
             let link = document.createElement("a")
             link.classList.add("btn","blue")
-            link.href="studysets/"+searchResponse.results[property].id
+            link.href="studysets/"+searchResponse.results[property].id+"/index.php"
             link.innerHTML = "Get Quizlet";
             parent.appendChild(title)
             parent.appendChild(subtitle)

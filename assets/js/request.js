@@ -465,7 +465,7 @@ function submit() {
       if(submitApiResponse[0] == 100) {
         status = "Quizlet added successfully";
         document.getElementById("submitStatusReturn").innerHTML = status
-        document.location.replace("studysets/"+submitApiResponse[1])
+        document.location.replace("studysets/"+submitApiResponse[1]+"/index.php")
       } else if(submitApiResponse[0] == 102) {
         status = "Quizlet already exists under the same teacher. If this is a mistake, contact us.";
         document.getElementById("submitStatusReturn").innerHTML = status
