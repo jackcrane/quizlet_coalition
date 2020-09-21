@@ -85,6 +85,8 @@ $qz_base_link = $qz_link_exploded[0] . "/" . $qz_link_exploded[1] . "/" . $qz_li
     <a class="btn qz-red tz-on-mobile" href="<?php echo $qz_base_link . "print"; ?>" target="_BLANK">Print a study guide</a>
     <?php if(file_exists($returned_title.".json")) {echo '<a class="btn qz-yellow tz-on-mobile" href="'. $returned_title . ".json" . '" download>Download the terms</a>';}?>
 		<div class="footer">
+      <script data-ad-client="ca-pub-5399968831948065" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <div class="helper-text">We show ads to cover the cost of hosting this recource. As soon as we make enough from ads, they will go away for the month.</div>
 		</div>
 	</div>
 </body>
