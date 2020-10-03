@@ -15,10 +15,10 @@ $teacherresult = $conn->query($teachersql);
 if($teacherresult->num_rows > 0) {
   while($row = $teacherresult->fetch_assoc()) {
     $sql .= " OR teacherId like '%" . $row["id"] . "%'";
-    echo $row["id"];
+    // echo $row["id"];
   }
 } else {
-  echo "no results, ln 21";
+  // echo "no results, ln 21";
 }
 
 $schoolsql = "SELECT * FROM schools WHERE name LIKE '%".$query."%'";
@@ -33,7 +33,7 @@ if($schoolresult->num_rows > 0) {
   // echo "no results, ln 33";
 }
 
-// echo $sql;
+echo $sql;
 
 $result = $conn->query($sql);
 
