@@ -22,7 +22,7 @@ if($teacherresult->num_rows > 0) {
 }
 
 $schoolsql = "SELECT * FROM schools WHERE name LIKE '%".$query."%'";
-echo $schoolsql;
+// echo $schoolsql;
 $schoolresult = $conn->query($sql);
 if($schoolresult->num_rows . 0) {
   while($row = $schoolresult->fetch_assoc()) {
@@ -63,7 +63,7 @@ if($err == "") {
     $searchResult = substr($searchResult,0,-1);
     $searchResult .= "}}";
   } else {
-    echo 'No results';
+    // echo 'No results';
   }
   $conn->close();
 
