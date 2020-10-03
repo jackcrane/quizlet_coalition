@@ -12,6 +12,7 @@ $sql = "SELECT * FROM studysets WHERE link LIKE '%".$query."%' OR title LIKE '%"
 $teachersql = "SELECT * FROM teachers WHERE name LIKE '%".$query."%'";
 echo $teachersql;
 $teacherresult = $conn->query($sql);
+var_dump($teacherresult);
 if($teacherresult->num_rows > 0) {
   while($row = $teacherresult->fetch_assoc()) {
     $sql .= " OR teacherId like '%" . $row["id"] . "%'";
