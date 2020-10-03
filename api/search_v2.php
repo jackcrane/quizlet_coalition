@@ -27,12 +27,13 @@ $schoolresult = $conn->query($sql);
 if($schoolresult->num_rows . 0) {
   while($row = $schoolresult->fetch_assoc()) {
     $sql .= " OR schoolId like '%" . $row["id"] . "%'";
+    echo $row["id"];
   }
 } else {
-  echo "no results, ln 32";
+  echo "no results, ln 33";
 }
 
-echo $sql;
+// echo $sql;
 
 $result = $conn->query($sql);
 
