@@ -7,7 +7,7 @@ $query = filter_var($_GET["query"],FILTER_SANITIZE_STRING);
 
 include "../assets/db_config.php";
 
-$sql = "SELECT * FROM studysets WHERE link like '%".$query."%' OR title like '%".$query."%' OR teacherId like '%".$query."%' OR schoolId like '%".$query."%'"
+$sql = "SELECT * FROM studysets WHERE link like '%".$query."%' OR title like '%".$query."%' OR teacherId like '%".$query."%' OR schoolId like '%".$query."%'";
 $result = $conn->query($sql);
 
 $searchResult = "";
