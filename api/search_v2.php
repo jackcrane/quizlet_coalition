@@ -11,7 +11,7 @@ $sql = "SELECT * FROM studysets WHERE link LIKE '%".$query."%' OR title LIKE '%"
 
 $teachersql = "SELECT * FROM teachers WHERE name LIKE '%a%'";
 echo $teachersql;
-$teacherresult = $conn->query($sql);
+$teacherresult = $conn->query($teachersql);
 if($teacherresult->num_rows > 0) {
   while($row = $teacherresult->fetch_assoc()) {
     $sql .= " OR teacherId like '%" . $row["id"] . "%'";
@@ -23,7 +23,7 @@ if($teacherresult->num_rows > 0) {
 
 $schoolsql = "SELECT * FROM schools WHERE name LIKE '%".$query."%'";
 // echo $schoolsql;
-$schoolresult = $conn->query($sql);
+$schoolresult = $conn->query($schoolsql);
 if($schoolresult->num_rows > 0) {
   while($row = $schoolresult->fetch_assoc()) {
     $sql .= " OR schoolId like '%" . $row["id"] . "%'";
