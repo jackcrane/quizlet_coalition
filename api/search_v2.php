@@ -8,6 +8,25 @@ $query = filter_var($_GET["query"],FILTER_SANITIZE_STRING);
 include "../assets/db_config.php";
 
 $sql = "SELECT * FROM studysets WHERE link like '%".$query."%' OR title like '%".$query."%' OR teacherId like '%".$query."%' OR schoolId like '%".$query."%'";
+
+$teachersql = "SELECT * FROM teachers WHERE name like '%".$query."%'";
+$teacherresult = $conn->query($sql);
+if($teacherresult->num_rows > 0) {
+  while($row = $teacherresult->fetch_assoc()) {
+    $sql .= " OR teacherId like '%" . $row["id"] . "%'";
+  }
+}
+
+$schoolsql = "SELECT * FROM schools WHERE name like '%".$query."%'";
+$schoolresult = $conn->query($sql);
+if($schoolresult->num_rows . 0) {
+  while($row = $schoolresult->fetch_assoc()) {
+    $sql .= " OR schoolId like '%" . $row["id"] . "%'";
+  }
+}
+
+echo $sql;
+
 $result = $conn->query($sql);
 
 $searchResult = "";
@@ -43,7 +62,7 @@ if($err == "") {
 } else {
   echo $err;
 }
-echo $searchResult;
+// echo $searchResult;
 // echo $sql;
 
 ?>
