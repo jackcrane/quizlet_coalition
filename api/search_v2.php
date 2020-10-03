@@ -10,20 +10,26 @@ include "../assets/db_config.php";
 $sql = "SELECT * FROM studysets WHERE link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR teacherId LIKE '%".$query."%'";
 
 $teachersql = "SELECT * FROM teachers WHERE name LIKE '%".$query."%'";
+echo $teachersql;
 $teacherresult = $conn->query($sql);
 if($teacherresult->num_rows > 0) {
   while($row = $teacherresult->fetch_assoc()) {
     $sql .= " OR teacherId like '%" . $row["id"] . "%'";
     echo $row["id"];
   }
+} else {
+  echo "no results, ln 21";
 }
 
 $schoolsql = "SELECT * FROM schools WHERE name LIKE '%".$query."%'";
+echo $schoolsql;
 $schoolresult = $conn->query($sql);
 if($schoolresult->num_rows . 0) {
   while($row = $schoolresult->fetch_assoc()) {
     $sql .= " OR schoolId like '%" . $row["id"] . "%'";
   }
+} else {
+  echo "no results, ln 32";
 }
 
 echo $sql;
