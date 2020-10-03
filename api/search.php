@@ -24,7 +24,7 @@ if (strpos($query, '{') !== false) {
   if($teacherresult->num_rows > 0) {
     while($row = $teacherresult->fetch_assoc()) {
       // echo $row["id"];
-      $sql = "SELECT * FROM studysets WHERE ((link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR classId LIKE '%".$query."%') AND teacherId = ".$row['id'].") ORDER by id LIMIT 100";
+      $sql = "SELECT * FROM studysets WHERE ((* LIKE '%".$query."%') AND teacherId = ".$row['id'].") ORDER by id LIMIT 100";
       // echo $sql;
     }
   } else {
@@ -42,14 +42,14 @@ if (strpos($query, '{') !== false) {
   if($schoolresult->num_rows > 0) {
     while($row = $schoolresult->fetch_assoc()) {
       // echo $row["id"];
-      $sql = "SELECT * FROM studysets WHERE ((link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR classId LIKE '%".$query."%') AND schoolId = ".$row['id'].") ORDER by id LIMIT 100";
+      $sql = "SELECT * FROM studysets WHERE ((* LIKE '%".$query."%') AND schoolId = ".$row['id'].") ORDER by id LIMIT 100";
       // echo $sql;
     }
   } else {
-    $sql = "SELECT * FROM studysets WHERE (link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR classId LIKE '%".$query."%') ORDER by id LIMIT 100";
+    $sql = "SELECT * FROM studysets WHERE (* LIKE '%".$query."%') ORDER by id LIMIT 100";
   }
 } else {
-  $sql = "SELECT * FROM studysets WHERE (link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR classId LIKE '%".$query."%') ORDER by id LIMIT 100";
+  $sql = "SELECT * FROM studysets WHERE (* LIKE '%".$query."%') ORDER by id LIMIT 100";
 }
 $searchResult = "";
 // echo "db included";
