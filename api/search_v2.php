@@ -31,8 +31,6 @@ if($schoolresult->num_rows > 0) {
   // echo "no results, ln 33";
 }
 
-echo $sql;
-
 $result = $conn->query($sql);
 
 $searchResult = "";
