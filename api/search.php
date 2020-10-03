@@ -28,7 +28,7 @@ if (strpos($query, '{') !== false) {
       // echo $sql;
     }
   } else {
-    $sql = "SELECT * FROM studysets WHERE (link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR classId LIKE '%".$query."%') ORDER by id LIMIT 100";
+    $sql = "SELECT * FROM studysets WHERE (* LIKE '%".$query."%') ORDER by id LIMIT 100";
   }
 } else if(strpos($query, '[') !== false) {
   $school = getStringBetween($query,"[","]");
