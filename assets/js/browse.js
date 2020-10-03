@@ -43,7 +43,7 @@ function search(v) {
         }
       }
     };
-    xmlhttp.open("GET", "./api/search.php?query="+v, true);
+    xmlhttp.open("GET", "./api/search_v2.php?query="+v, true);
     xmlhttp.send();
   } else {
     document.getElementById('results').innerHTML = "No results"
