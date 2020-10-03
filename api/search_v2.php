@@ -9,7 +9,7 @@ include "../assets/db_config.php";
 
 $sql = "SELECT * FROM studysets WHERE link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR teacherId LIKE '%".$query."%'";
 
-$teachersql = "SELECT * FROM teachers WHERE name LIKE '%a%'";
+$teachersql = "SELECT * FROM teachers WHERE name LIKE '%".$query."%'";
 echo $teachersql;
 $teacherresult = $conn->query($teachersql);
 if($teacherresult->num_rows > 0) {
