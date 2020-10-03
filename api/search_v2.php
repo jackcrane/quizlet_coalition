@@ -10,7 +10,6 @@ include "../assets/db_config.php";
 $sql = "SELECT * FROM studysets WHERE link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR teacherId LIKE '%".$query."%'";
 
 $teachersql = "SELECT * FROM teachers WHERE name LIKE '%".$query."%'";
-echo $teachersql;
 $teacherresult = $conn->query($teachersql);
 if($teacherresult->num_rows > 0) {
   while($row = $teacherresult->fetch_assoc()) {
@@ -22,7 +21,6 @@ if($teacherresult->num_rows > 0) {
 }
 
 $schoolsql = "SELECT * FROM schools WHERE name LIKE '%".$query."%'";
-// echo $schoolsql;
 $schoolresult = $conn->query($schoolsql);
 if($schoolresult->num_rows > 0) {
   while($row = $schoolresult->fetch_assoc()) {
@@ -70,7 +68,7 @@ if($err == "") {
 } else {
   echo $err;
 }
-// echo $searchResult;
+echo $searchResult;
 // echo $sql;
 
 ?>
