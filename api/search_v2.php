@@ -7,17 +7,18 @@ $query = filter_var($_GET["query"],FILTER_SANITIZE_STRING);
 
 include "../assets/db_config.php";
 
-$sql = "SELECT * FROM studysets WHERE link like '%".$query."%' OR title like '%".$query."%' OR teacherId like '%".$query."%' OR schoolId like '%".$query."%'";
+$sql = "SELECT * FROM studysets WHERE link LIKE '%".$query."%' OR title LIKE '%".$query."%' OR teacherId LIKE '%".$query."%'";
 
-$teachersql = "SELECT * FROM teachers WHERE name like '%".$query."%'";
+$teachersql = "SELECT * FROM teachers WHERE name LIKE '%".$query."%'";
 $teacherresult = $conn->query($sql);
 if($teacherresult->num_rows > 0) {
   while($row = $teacherresult->fetch_assoc()) {
     $sql .= " OR teacherId like '%" . $row["id"] . "%'";
+    echo $row["id"];
   }
 }
 
-$schoolsql = "SELECT * FROM schools WHERE name like '%".$query."%'";
+$schoolsql = "SELECT * FROM schools WHERE name LIKE '%".$query."%'";
 $schoolresult = $conn->query($sql);
 if($schoolresult->num_rows . 0) {
   while($row = $schoolresult->fetch_assoc()) {
