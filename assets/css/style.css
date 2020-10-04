@@ -33,6 +33,10 @@ body, html {
 	border: 2px solid transparent;
 }
 
+.navbar.top .bold.left::after {
+	content: " 💯";
+}
+
 .right {
 	float:right;
 }
