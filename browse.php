@@ -1,6 +1,6 @@
 <?php
 
-@$query = $_GET["squery"] . $_GET["tquery"];
+@$query = $_GET["query"];
 
 ?>
 
