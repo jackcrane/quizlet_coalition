@@ -69,7 +69,7 @@
 		</div>
 
 		<div class="footer">
-			<span style="color:bold;font-weight:bold">NOTICE: This app is in beta. Please report errors to <a href="mailto:3jbc22@gmail.com" style="text-decoration:underline;">3jbc22@gmail.com</a></span>
+			<span style="color:red;font-weight:bold">NOTICE: This app is in beta. Please report errors to <a href="mailto:3jbc22@gmail.com" style="text-decoration:underline;">3jbc22@gmail.com</a></span>
 		</div>
 	</div>
 </body>
