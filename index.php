@@ -21,14 +21,14 @@
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://metatags.io/">
+<meta property="og:url" content="https://quizletcoalition.cc/">
 <meta property="og:title" content="Quizlet Coalition - Find and share quizlets!">
 <meta property="og:description" content="Quizlet Coalition is a web app designed to help find and share quizlets from and with your classmates or previous students.">
 <meta property="og:image" content="https://quizletcoalition.cc/assets/images/og.png">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:url" content="https://quizletcoalition.cc/">
 <meta property="twitter:title" content="Quizlet Coalition - Find and share quizlets!">
 <meta property="twitter:description" content="Quizlet Coalition is a web app designed to help find and share quizlets from and with your classmates or previous students.">
 <meta property="twitter:image" content="https://quizletcoalition.cc/assets/images/og.png">
@@ -69,6 +69,7 @@
 		</div>
 
 		<div class="footer">
+			<span style="color:bold;font-weight:bold">NOTICE: This app is in beta. Please report errors to <a href="mailto:3jbc22@gmail.com" style="text-decoration:underline;">3jbc22@gmail.com</a></span>
 		</div>
 	</div>
 </body>
